@@ -1,6 +1,19 @@
-FROM --platform=linux/x86-64 nginx:stable-alpine
+FROM node:22-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY ./front /usr/share/nginx/html
-COPY ./docker/nginx.conf /etc/nginx/nginx.conf
+COPY ./back/package.json .
+
+RUN npm install
+
+COPY ./back .
+
+
+EXPOSE 80
+
+COPY  ./front /app/public
+
+
+ENV ADDRESS=0.0.0.0 PORT=80
+
+CMD ["npm", "start"]

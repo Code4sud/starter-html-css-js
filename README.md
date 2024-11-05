@@ -27,7 +27,8 @@
        ```
        <img src="/images/votre_image.jpg">
        ```
-
+2. Si vous souhaitez utiliser un backend, un projet express est initialise dans le dossier back.
+Merci de ne pas toucher a la structure meme si vous n'utilisez pas le backend.
 ### Pour tester votre site:
 
 afin de s'assurer que votre site se deploiera correctement, vous pouvez executer le script test.sh
