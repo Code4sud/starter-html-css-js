@@ -1,29 +1,37 @@
-### How to use this template:
+### Comment utiliser ce modèle :
 
-1. Using the template  
+1. Utilisation du modèle  
   
    #### HTML
-     * Start with `index.html`, this will be your root page (the main page)  
-       Questions about its content? Refer to `template.html`  
-     * To make new HTML pages, duplicate `template.html` inside the folder and rename it to the URL path you want.  
+     * Commencez avec `index.html`, ce sera votre page racine (la page principale)  
+       Des questions sur son contenu ? Référez-vous à `template.html`  
+     * Pour créer de nouvelles pages HTML, dupliquez `template.html` dans le dossier et renommez-le selon le chemin URL souhaité.  
        ```
        about.html => my_website.com/about
        ```  
-       *It's recommended that you delete the explanation comments in any new HTML pages*
+       *Il est recommandé de supprimer les commentaires explicatifs dans toutes les nouvelles pages HTML*
 
    #### CSS
-     * Start with `main.css` inside the `css` folder
-     * What are `normalize.css` and `html5-boilerplate.css` for?  
-       They make basic styles consistent across all kinds of web browsers
+     * Commencez avec `main.css` dans le dossier `css`
+     * À quoi servent `normalize.css` et `html5-boilerplate.css` ?  
+       Ils rendent les styles de base cohérents sur tous les types de navigateurs web
 
    #### JavaScript
-     * Start with `main.js` inside the `js` folder
-     * What's jQuery? It's a JavaScript library that allows you to manipulate your website much more easily with JavaScript
-     * If you download any jQuery plugins, paste a minified version of them into `plugins.js`
+     * Commencez avec `main.js` dans le dossier `js`
+     * Qu'est-ce que jQuery ? C'est une bibliothèque JavaScript qui vous permet de manipuler votre site web beaucoup plus facilement avec JavaScript
+     * Si vous téléchargez des plugins jQuery, collez une version minifiée de ceux-ci dans `plugins.js`
 
    #### Images
-     * If you want to host your own images, put the image file (.jpg, .png, .gif) inside the images directory.  
-       Then the source on an **img tag** will be  
+     * Si vous souhaitez héberger vos propres images, placez le fichier image (.jpg, .png, .gif) dans le répertoire images.  
+       Ensuite, la source sur une **balise img** sera  
        ```
-       <img src="/images/your_picture.jpg">
+       <img src="/images/votre_image.jpg">
        ```
+
+### Pour tester votre site:
+
+afin de s'assurer que votre site se deploiera correctement, vous pouvez executer le script test.sh
+```
+bash test.sh
+```
+vous aurez besoin de docker installé sur votre machine
