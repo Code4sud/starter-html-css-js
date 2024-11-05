@@ -47,7 +47,7 @@ jobs:
       - name: Build and push back
         uses: docker/build-push-action@v6
         env:
-          IMG_NAME: ghcr.io/code4sud/ia4sud
+          IMG_NAME: ghcr.io/code4sud/alterte4sud
         with:
           context: ./
           file: ./docker/Dockerfile
@@ -69,12 +69,12 @@ jobs:
           chmod 600 $HOME/.kube/config
       - name: Deployment to kubernetes
         run: |
-          PROJECT_NAME=${{ needs.get-repo-name.outputs.repo_name }} IMAGE="ghcr.io/code4sud/${{ needs.get-repo-name.outputs.repo_name }}:dev-${{ needs.get-repo-name.outputs.timestamp }}" envsubst < ./kube/deployment.yaml | kubectl apply -n ia4sud -f -
+          PROJECT_NAME=${{ needs.get-repo-name.outputs.repo_name }} IMAGE="ghcr.io/code4sud/${{ needs.get-repo-name.outputs.repo_name }}:dev-${{ needs.get-repo-name.outputs.timestamp }}" envsubst < ./kube/deployment.yaml | kubectl apply -n alterte4sud -f -
 
       - name: Service to kubernetes
         run: |
-          PROJECT_NAME=${{ needs.get-repo-name.outputs.repo_name }} envsubst < ./kube/service.yaml | kubectl apply -n ia4sud -f -
+          PROJECT_NAME=${{ needs.get-repo-name.outputs.repo_name }} envsubst < ./kube/service.yaml | kubectl apply -n alterte4sud -f -
 
       - name: Ingress to kubernetes
         run: |
-          PROJECT_NAME=${{ needs.get-repo-name.outputs.repo_name }} envsubst < ./kube/ingress.yaml | kubectl apply -n ia4sud -f -
+          PROJECT_NAME=${{ needs.get-repo-name.outputs.repo_name }} envsubst < ./kube/ingress.yaml | kubectl apply -n alterte4sud -f -
